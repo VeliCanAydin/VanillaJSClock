@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Convergence', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6BA95;
+    font-size: 1.2rem;
+}
+
+form {
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+}
+
+#name-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #FBF8F1;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+}
+#name-input:hover {
+    border-color: #f5decc;
+}
+
+#name-input:focus {
+    border-color: #95DAE6;
+}
+
+#name-label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: white;
+    cursor: text;
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
+}
+
+#name-input:focus ~ #name-label,
+#name-input:not(:placeholder-shown)#name-input:not(:focus) ~ #name-label{
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+    background-color: #E6BA95;
+}
+
+#btn-submit {
+    position: absolute;
+    top: 3.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    border: 0px;
+    background-color: #8AA8E6;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+}
+#btn-submit:hover {
+    background-color: #6B83B3;
+}
+#btn-submit:active {
+    background-color: #3D4B66;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#clock-section {
+    display: none;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#stopwatch-button {
+    margin: 0.5rem 0.9rem;
+    padding: 0.5rem 0.5rem;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+    border: 0px;
+    background-color: #8AA8E6;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+}
+
+#stopwatch-button:hover {
+    background-color: #6B83B3;
+}
+#stopwatch-button:active {
+    background-color: #3D4B66;
+}
